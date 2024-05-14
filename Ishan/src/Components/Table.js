@@ -156,8 +156,8 @@ export default class Table extends Component {
     return (
       <table className="table table-bordered table-striped mt-2">
         <thead className="thead-dark">
-          <tr>
-            <th colSpan="4" className="text-center">View all</th>
+          <tr className='ViewSection'>
+            <th colSpan="4" className="text-center View">View all</th>
           </tr>
           <tr className='Title'>
             <th className="text-center">% concentration</th>
@@ -186,7 +186,7 @@ export default class Table extends Component {
     return filteredData.map((rowData, rowIndex) => (
       <React.Fragment key={rowIndex}>
         {rowData.products.map((product, productIndex) => (
-          <tr key={productIndex}>
+          <tr className="Main" key={productIndex}>
             {productIndex === 0 && (
               <>
                 <td rowSpan={rowData.products.length}>{rowData.id}</td>
@@ -233,20 +233,20 @@ export default class Table extends Component {
         <div className="table-responsive">
           <table className="table table-bordered table-striped">
             <thead className="thead-dark text-center">
-              <tr>
+              <tr className='Header'>
                 <th>ID</th>
-                <th>Priority</th>
-                <th>Group</th>
-                <th>Product Name</th>
+                <th><i class="bi bi-chevron-expand"style={{ color: '#344054', fontSize: '15px' }}></i>Priority</th>
+                <th><i class="bi bi-chevron-expand"style={{ color: '#344054', fontSize: '15px' }}></i>Group</th>
+                <th><i class="bi bi-chevron-expand"style={{ color: '#344054', fontSize: '15px' }}></i>Product Name</th>
                 <th>Variants</th>
-                <th>Address</th>
-                <th>Created on</th>
-                <th>Deadline delivery</th>
-                <th>Assigned to</th>
-                <th>Delivery to</th>
-                <th>Receiver</th>
-                <th>Sample size</th>
-                <th>Application</th>
+                <th><i class="bi bi-chevron-expand"style={{ color: '#344054', fontSize: '15px' }}></i>Address</th>
+                <th><i class="bi bi-chevron-expand"style={{ color: '#344054', fontSize: '15px' }}></i>Created on</th>
+                <th><i class="bi bi-chevron-expand"style={{ color: '#344054', fontSize: '15px' }}></i>Deadline delivery</th>
+                <th><i class="bi bi-chevron-expand"style={{ color: '#344054', fontSize: '15px' }}></i>Assigned to</th>
+                <th><i class="bi bi-chevron-expand"style={{ color: '#344054', fontSize: '15px' }}></i>Delivery to</th>
+                <th><i class="bi bi-chevron-expand"style={{ color: '#344054', fontSize: '15px' }}></i>Receiver</th>
+                <th><i class="bi bi-chevron-expand"style={{ color: '#344054', fontSize: '15px' }}></i>Sample size</th>
+                <th><i class="bi bi-chevron-expand"style={{ color: '#344054', fontSize: '15px' }}></i>Application</th>
                 <th>Additional Info</th>
                 <th>Documents</th>
                 <th>Actions</th>

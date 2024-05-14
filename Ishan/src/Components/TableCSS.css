@@ -1,3 +1,13 @@
+.Header th{
+    color: #344054;
+}
+.Main td,th{
+    color: #344054;
+    background-color: white;
+}
+.ViewSection th{
+    color: #8B8D97;
+}
 .icons{
     text-align: center;
 }
